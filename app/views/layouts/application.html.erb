@@ -25,13 +25,14 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
+
+              <% if user_signed_in? %>
               <li>
-               <a class="nav-link text-light" href="/">
+               <a class="nav-link text-light" href="/users/show">
                 <i class="fa-solid fa-house"></i>
                 Home
                </a>
               </li>
-              <% if user_signed_in? %>
               <li>
                <a class="nav-link text-light" href="/users/index">
                  <i class="fa-solid fa-users"></i>
@@ -39,7 +40,7 @@
                </a>
               </li>
               <li>
-               <a class="nav-link text-light" href="/post_images/index">
+               <a class="nav-link text-light" href="/books/index">
                  <i class="fa-solid fa-book-open"></i>
                  Books
                </a>
@@ -51,6 +52,12 @@
                </a>
               </li>
               <% else %>
+              <li>
+               <a class="nav-link text-light" href="/">
+                <i class="fa-solid fa-house"></i>
+                Home
+               </a>
+              </li>
               <li>
                <a class="nav-link text-light" href="/homes/about">
                  <i class="fa-solid fa-link"></i>
