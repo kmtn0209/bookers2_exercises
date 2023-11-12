@@ -6,10 +6,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    @nickname = current_user.name
   end
 
   def edit
   end
-  
-  
+
+
 end
